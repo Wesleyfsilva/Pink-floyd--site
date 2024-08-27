@@ -13,7 +13,7 @@ html, body {
 
 body {
   background-color: #1c1c1c;
-  background: url('imagens/dark.jpg') no-repeat center center fixed;
+  background: url('dark.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
