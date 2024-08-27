@@ -1,0 +1,117 @@
+Html
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Floyd Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rainbow-strip"></div>
+    <header class="main-header">
+        <h1>Pink Floyd</h1>
+        <nav>
+            <ul>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#musicas">Discografia</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="historia" class="section">
+        <h2>História da Banda</h2>
+        <p>Pink Floyd é uma banda de rock britânica formada em 1965, conhecida por seus álbuns conceituais e suas performances ao vivo inovadoras. O grupo foi fundado por Syd Barrett, Roger Waters, Nick Mason e Richard Wright. A banda ganhou fama mundial com álbuns icônicos como "The Dark Side of the Moon", "Wish You Were Here" e "The Wall". A abordagem experimental da banda em termos de música e produção a tornou uma das mais influentes da história do rock.</p>
+    </section>
+
+    <section id="musicas" class="section">
+      <h2>Discografia</h2>
+      <p>Aqui você pode explorar a discografia de Pink Floyd, incluindo álbuns notáveis como:</p>
+      <ul class="album-list">
+          <li>
+              <a href="https://open.spotify.com/album/4LH4d3cOWNNsVw41Gqt2kv" target="_blank" class="album-link">
+                  <img src="imagens/dark.jpg" alt="The Dark Side of the Moon">
+                  <span>The Dark Side of the Moon</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://open.spotify.com/album/0bCAjiUamIFqKJsekOYuRw" target="_blank" class="album-link">
+                  <img src="imagens/wish.jpg" alt="Wish You Were Here">
+                  <span>Wish You Were Here</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://open.spotify.com/album/5Dbax7G8SWrP9xyzkOvy2F" target="_blank" class="album-link">
+                  <img src="imagens/wall.jpg" alt="The Wall">
+                  <span>The Wall</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://open.spotify.com/album/468ZwCchVtzEbt9BHmXopb" target="_blank" class="album-link">
+                  <img src="imagens/meddle.jpg" alt="Meddle">
+                  <span>Meddle</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://open.spotify.com/album/3b4E89rxzZQ9zkhgKpj8N4" target="_blank" class="album-link">
+                  <img src="imagens/animals.jpg" alt="Animals">
+                  <span>Animals</span>
+              </a>
+          </li>
+      </ul>
+  </section>
+
+  <section id="integrantes" class="section">
+    <h2>Integrantes da Banda</h2>
+    <div class="integrantes-container">
+      <div class="integrante" data-id="syd-barrett" onclick="showInfo('syd')">
+        <img src="imagens/syd.jpg" alt="Syd Barrett">
+        <span>Syd Barrett</span>
+    </div>
+        <div class="integrante" data-id= "roger-waters" onclick="showInfo('roger')">
+            <img src="imagens/roger.jpg" alt="Roger Waters">
+            <span>Roger Waters</span>
+        </div>
+        <div class="integrante" data-id= "nick-mason" onclick="showInfo('nick')">
+            <img src="imagens/nick.jpg" alt="Nick Mason">
+            <span>Nick Mason</span>
+        </div>
+        <div class="integrante" data-id= "richard-wright" onclick="showInfo('richard')">
+            <img src="imagens/richard.jpg" alt="Richard Wright">
+            <span>Richard Wright</span>
+        </div>
+        <div class="integrante" data-id="david-gilmour" onclick="showInfo('david')">
+            <img src="imagens/david.jpg" alt="David Gilmour">
+            <span>David Gilmour</span>
+        </div>
+    </div>
+    <div id="integrante-info" class="integrante-info">
+        <p>Selecione um integrante para ver informações.</p>
+    </div>
+</section>
+
+  
+  
+  <section id="quiz" class="section">
+    <h2>Quiz sobre Pink Floyd</h2>
+    <p>Teste seus conhecimentos sobre Pink Floyd com nosso quiz abaixo:</p>
+    <form id="quiz-form">
+        <div class="quiz-question">
+            <label for="question1">1. Qual foi o primeiro álbum de estúdio do Pink Floyd?</label>
+            <input type="text" id="question1" name="question1" required>
+        </div>
+        <div class="quiz-question">
+            <label for="question2">2. Quem foi o fundador original da banda?</label>
+            <input type="text" id="question2" name="question2" required>
+        </div>
+        <button type="submit">Enviar Respostas</button>
+        <p id="quiz-result" class="quiz-result"></p>
+    </form>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #1c1c1c;
+  background: url('imagens/dark.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.rainbow-strip {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  position: fixed; /* Fixado para não rolar com o conteúdo */
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px;
+  border-bottom: 5px solid #ff2f92;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+  margin-top: 20px; /* Adiciona espaço abaixo da faixa de arco-íris */
+}
+
+.main-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+  
+}
+
+nav ul li a {
+  color: #ff2f92;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5); /* Cor de fundo leve para contraste */
+  border-radius: 10px;
+  margin: 60px 0; /* Espaço entre seções */
+}
+
+#historia {
+  padding: 60px 20px;
+  color: #fff;
+}
+
+#historia p {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+}
+
+#musicas {
+  background: rgba(0, 0, 0, 0.5); /* Cor de fundo leve para contraste */
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.album-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaço entre os itens */
+}
+
+.album-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px; /* Largura máxima das imagens */
+  overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+  position: relative; /* Necessário para o efeito de zoom */
+}
+
+.album-list img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease; /* Transição suave para o efeito de zoom */
+  margin-bottom: 20px;
+}
+
+.album-list img:hover {
+  transform: scale(1.1); /* Aumenta a imagem para 110% do tamanho original */
+}
+
+.album-list span {
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+@keyframes rainbow-text {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  57% { color: blue; }
+  71% { color: indigo; }
+  85% { color: violet; }
+  100% { color: red; }
+}
+
+.main-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: rainbow-text 5s infinite linear; /* Animação de arco-íris */
+}
+
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quiz-question {
+  margin-bottom: 15px;
+}
+
+.quiz-question label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.quiz-question input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #ff2f92;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff007a;
+}
+
+
+/* Estilização do formulário do quiz */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-question {
+  margin-bottom: 15px;
+}
+
+.quiz-question label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+}
+
+.quiz-question input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+}
+
+button {
+  background-color: #ff2f92;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ff007a;
+}
+
+.quiz-result {
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.integrantes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.integrante {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.integrante img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.integrante:hover {
+  transform: scale(1.1);
+}
+
+.integrante span {
+  display: block;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  color: #fff;
+  padding: 10px;
+}
+
+.integrante-info {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/*.integrante {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}*/
+
+.integrante-img {
+  width: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/*.integrante-img:hover {
+  transform: scale(1.05);
+}
+
+/*.integrante-info {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 80vw;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}*/
+
+.integrante-info.active {
+  display: block;
+  opacity: 1;
+}
